@@ -1,0 +1,1 @@
+<div class="g-recaptcha" data-sitekey="{sitekey}" data-callback="{recaptcha_success}" data-expired-callback="{recaptcha_expired}" data-error-callback="{recaptcha_error}"></div>

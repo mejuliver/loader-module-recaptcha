@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>How to Use</title>
+</head>
+<body>
+	<h3>Initialize base script for recaptcha</h3>
+	<pre>
+		$loader->load('recaptcha')->init();
+	</pre>
+	<strong>Make sure you specify a site key on the recaptcha config, otherwise, you can always provide it as a first argument when you call the load recaptcha box</strong>
+	<br>
+	<h3>Load Recaptcha Box</h3>
+	<pre>
+		$loader->load('recaptcha')->loadRecaptchaBox("[site key]","[success callback]","[expired callback]","[error callback]");
+	</pre>
+	<strong>
+		[success callback] - called when user successfully completed recaptcha frontend validation
+	</strong>
+	<strong>
+		[expired callback] - called when recaptcha expires
+	</strong>
+	<strong>
+		[expired error] - called when recaptcha has an error
+	</strong>
+	<br>
+	<p>To verify recaptcha from your backend, you can call verify_recaptcha function</p>
+	<pre>
+		$loader->load('recaptcha')->recaptcha_verify([response],[secret key])
+	</pre>
+	<strong>
+		[response] - hidden input with name "recaptcha_response" were automatically added unto your form that house the recaptcha so you can get the response value and pass as a response argument
+	</strong>
+	<strong>
+		[secret key] - this comes with your site key (google recaptcha admin console)
+	</strong>
+</body>
+</html>
